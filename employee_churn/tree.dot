@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="OverTime <= 0.5\ngini = 0.3\nsamples = 1029\nvalue = [862, 167]"] ;
+1 [label="TotalWorkingYears <= 2.5\ngini = 0.2\nsamples = 736\nvalue = [657, 79]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Age <= 31.5\ngini = 0.4\nsamples = 63\nvalue = [42, 21]"] ;
+1 -> 2 ;
+3 [label="gini = 0.5\nsamples = 46\nvalue = [26, 20]"] ;
+2 -> 3 ;
+4 [label="gini = 0.1\nsamples = 17\nvalue = [16, 1]"] ;
+2 -> 4 ;
+5 [label="NumCompaniesWorked <= 4.5\ngini = 0.2\nsamples = 673\nvalue = [615, 58]"] ;
+1 -> 5 ;
+6 [label="gini = 0.1\nsamples = 512\nvalue = [480, 32]"] ;
+5 -> 6 ;
+7 [label="gini = 0.3\nsamples = 161\nvalue = [135, 26]"] ;
+5 -> 7 ;
+8 [label="MonthlyIncome <= 2929.0\ngini = 0.4\nsamples = 293\nvalue = [205, 88]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="DailyRate <= 975.5\ngini = 0.5\nsamples = 74\nvalue = [28, 46]"] ;
+8 -> 9 ;
+10 [label="gini = 0.3\nsamples = 41\nvalue = [9, 32]"] ;
+9 -> 10 ;
+11 [label="gini = 0.5\nsamples = 33\nvalue = [19, 14]"] ;
+9 -> 11 ;
+12 [label="StockOptionLevel <= 0.5\ngini = 0.3\nsamples = 219\nvalue = [177, 42]"] ;
+8 -> 12 ;
+13 [label="gini = 0.4\nsamples = 90\nvalue = [61, 29]"] ;
+12 -> 13 ;
+14 [label="gini = 0.2\nsamples = 129\nvalue = [116, 13]"] ;
+12 -> 14 ;
+}

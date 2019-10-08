@@ -1,0 +1,17 @@
+
+	
+sqoop job \
+--create importDataall \
+-- import-all-tables \
+--connect jdbc:mysql://172.16.0.240/insofe_b44_phd_data \
+--username insofeadmin \
+--P \
+--warehouse-dir '/user/2105B44/B44/PHD_DATASET/' \
+-m 1
+
+hdfs dfs -cat /user/<userID>/insofe_<userID>/employees/part-m-00000 | head
+hdfs dfs -cat /user/2105B44/B44/PHD_DATASET/b44_phd_train/part-m-00000 | head
+hdfs dfs -cat /user/2105B44/B44/PHD_DATASET/b44_phd_test/part-m-00000 | head
+
+Data HDFs path 
+/user/2105B44/B44/PHD_DATASET/b44_phd_train
